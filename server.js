@@ -11,7 +11,7 @@ const router = express.Router()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use('/', express.static( __dirname ))
+app.use('/', express.static( __dirname + '/client' ))
 app.use('/api', router)
 
 const process = require('process')
@@ -52,6 +52,6 @@ let staticRouts =
 initStaticRouts(staticRouts)
 function initStaticRouts(routs){
 	routs.forEach(route =>{
-		app.use(`/${route}*`,express.static(__dirname))
+		app.use(`/${route}*`,express.static('client'))
 	})
 }
