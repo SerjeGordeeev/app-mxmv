@@ -61,13 +61,13 @@ module.exports.register = function(req, res) {
 
 module.exports.login = function(req, res) {
 
-  request.post({url:'http://psyouth.herokuapp.com/api/auth/login', form: req.body }, function (error, response, body) {
+/*  request.post({url:'http://psyouth.herokuapp.com/api/auth/login', form: req.body }, function (error, response, body) {
     let result = JSON.parse(response.body)
     if(result.message){
       res.status(404)
     }
     res.json(result)
-  });
+  });*/
 
   if(req.body.id){
     User.find({_id:mongoose.Types.ObjectId(req.body.id)},(err, user)=>{
