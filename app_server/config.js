@@ -13,7 +13,7 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use('/',express.static('client'))
+/*app.use('/',express.static('client'))*/
 
 app.use(passport.initialize())
 app.use('/api', rotesApi)
@@ -33,9 +33,9 @@ let staticRouts = [
 	'analize'
 ];
 
-initStaticRouts(staticRouts)
+/*initStaticRouts(staticRouts)
 function initStaticRouts(routs){
 	routs.forEach(route =>{
 		app.use(`/${route}*`,express.static('client'))
 	})
-}
+}*/
