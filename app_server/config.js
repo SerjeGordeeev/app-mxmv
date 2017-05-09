@@ -13,8 +13,9 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
+console.log(228)
 app.use('/',express.static('client'))
-
+console.log(228)
 app.use(passport.initialize())
 app.use('/api', rotesApi)
 
