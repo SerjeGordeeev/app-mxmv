@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const dbURI = 'mongodb://admin:motkovmotkov@ds133388.mlab.com:33388/motkov'
+const dbURI = 'mongodb://admin:Nryw5W@ds111441.mlab.com:11441/psyouth_db'
+//'mongodb://localhost/motkovDB'
 let gracefulShutdown
 
 
